@@ -8,8 +8,8 @@ function App() {
 
   const [valueMoneda, setValueMoneda] = useState('AED');
   const [valueMonto, setValueMonto] = useState('');
-  const [valueResultadoUSD, setValueResultadoUSD] = useState('$');
-  const [valueResultadoARS, setValueResultadoARS] = useState('$');
+  const [valueResultadoUSD, setValueResultadoUSD] = useState('$ 0.00');
+  const [valueResultadoARS, setValueResultadoARS] = useState('$ 0.00');
   const [valueUSDARS, setValueUSDARS] = useState(0);
 
   const API_key = '1c965822d824566017ea2525';
@@ -73,7 +73,7 @@ function App() {
         <hr style={{width: '70%'}}></hr>
         <div className='inputs'>
           <div id='divMonto' className='input-group'>
-            <input type='number' className='form-control' id='inputMonto' value={valueMonto} placeholder='Ingresar Monto' onChange={e => setValueMonto(e.target.value)}></input>
+            <input type='number' className='form-control' id='inputMonto' value={valueMonto} placeholder='Ingresar monto' onChange={e => setValueMonto(e.target.value)}></input>
             <select id='selectMoneda' className='form-select' onChange={e => setValueMoneda(e.target.value)}>
               <option value="AED">AED - Emiratos</option>
               <option value="THB">THB - Tailandia</option>
